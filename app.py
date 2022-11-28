@@ -1,6 +1,11 @@
 from flask import Flask, render_template
 app = Flask(__name__)
 @app.route('/')
+
+@app.route('/test')
+def test():
+    return render_template('test.html')
+
 @app.route('/hello')
 def hello():
     return render_template('hello.html')
@@ -15,13 +20,9 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 
-# import datetime
-
+# import datetim
 # from flask import Flask, render_template
-
 # app = Flask(__name__)
-
-
 # @app.route('/')
 # def root():
 #     # For the sake of example, use static information to inflate the template.
@@ -30,10 +31,8 @@ if __name__ == '__main__':
 #                    datetime.datetime(2018, 1, 2, 10, 30, 0),
 #                    datetime.datetime(2018, 1, 3, 11, 0, 0),
 #                    ]
-
 #     return render_template('index.html', times=dummy_times)
 #     # return  "hello world"
-
 # if __name__ == '__main__':
 #     # This is used when running locally only. When deploying to Google App
 #     # Engine, a webserver process such as Gunicorn will serve the app. This
