@@ -3,11 +3,11 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/hello')
 def hello():
-    return render_template('test.html')
-
-@app.route('/test')
-def test():
     return render_template('hello.html')
+
+@app.route('/index')
+def index():
+    return render_template('index.html')
 # ENV = jinja2.Environment(loader=jinja2.FileSystemLoader(str(root_path / 'templates')))
 # template = ENV.get_template("index.html")
 if __name__ == '__main__':
