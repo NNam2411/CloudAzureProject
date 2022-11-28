@@ -1,5 +1,5 @@
-{% comment %} {%block content%} {% endcomment %}
-<!Doctype html>
+{%block content%}
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,8 @@
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     crossorigin="anonymous"> -->
     <script src="https://kit.fontawesome.com/f50e40892f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./static/style.css">
+    <!--<link rel="stylesheet" href="./static/style.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
 </head>
 <body>
     <div id="main">
@@ -32,19 +33,19 @@
                 </ul>
                 <a href="">
                     <div class="wrap-login-btn">
-                        <a href="./login.html">
+                        <a href="">
                         <button class="login-btn">Log In</button>
                         </a>
                     </div>  
                     <div class="wrap-signup-btn">
-                        <a href="./login.html">
+                        <a href="">
                         <button class="signup-btn">Sign Up</button>
                         </a>
                     </div> 
                 </a>
             </div>
             <!-- end nav -->
-        </div>
+        </div>      
         <!-- END HEADER -->
         <!-- SLIDESHOW -->
         <div id="slideshow">
@@ -77,8 +78,7 @@
                             </div>
                             <div class="wrap-icon-holder-product">
                                 <div class="icon-holder-product">                                        
-                                    <span class="wrap-span-icon-holder-product">                                   
-                                        
+                                    <span class="wrap-span-icon-holder-product">                                                                           
                                         <i id="credit-product" class="fa fa-credit-card"><span class="credit-product-price">15,720,000 VND</span></i>                                       
                                     </span>
                                 </div>
@@ -319,7 +319,7 @@
                     </a>
                 </div>
             </div>
-            </section>
+        </section>
         <!-- End Tour -->
         <!-- END PRODUCT -->
         <!-- THE REVIEW -->
@@ -452,7 +452,8 @@
         </footer>
         <!-- END FOOTER  -->
     </div>
+    
     <script src="{{url_for('static',filename='style.css,reset.css')}}"></script>
 </body>
 </html>
-{% comment %} {%endblock%} {% endcomment %}
+{%endblock%}

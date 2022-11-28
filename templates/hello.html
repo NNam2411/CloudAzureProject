@@ -1,1 +1,52 @@
-{%extends 'index.html'%}
+{%extends "index.html"%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Musician Dream</title>   
+    <!-- Load font awesome icons -->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous"> -->
+    <script src="https://kit.fontawesome.com/f50e40892f.js" crossorigin="anonymous"></script>
+    <!--<link rel="stylesheet" href="./static/style.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+</head>
+<body>
+    <div id="main">
+        <!-- HEADER -->
+        <div id="header">
+            <!-- nav -->
+            <div id="wrap-nav">
+                <ul id="nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="https://open.spotify.com">Songs</a></li>
+                    <li><a href="">Course<i class="nav-arrow-down ti-angle-down"></i></a>
+                        <ul class="subnav">
+                            <li class="subnav-item"><a href="https://www.justinguitar.com/classes/beginner-guitar-course-grade-one">Grade 1</a></li>
+                            <li class="subnav-item"><a href="https://www.justinguitar.com/classes/beginner-guitar-course-grade-two">Grade 2</a></li>
+                            <li class="subnav-item"><a href="https://www.justinguitar.com/classes/beginner-guitar-course-grade-three">Grade 3</a></li>
+                        </ul>
+                    </li>        
+                    <li><a href="https://vietthuong.vn/dan-piano.html">Product</a></li>                                     
+                </ul>
+                <a href="">
+                    <div class="wrap-login-btn">
+                        <a href="">
+                        <button class="login-btn">Log In</button>
+                        </a>
+                    </div>  
+                    <div class="wrap-signup-btn">
+                        <a href="">
+                        <button class="signup-btn">Sign Up</button>
+                        </a>
+                    </div> 
+                </a>
+            </div>
+            <!-- end nav -->
+        </div> 
+    </div>     
+</body>
+</html>
