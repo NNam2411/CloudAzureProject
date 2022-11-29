@@ -5,8 +5,8 @@ app = Flask(__name__)
 @app.route('/home')
 def home():
     return render_template('home.html')
-@app.route('/dmm')
-def dmm():
+@app.route('/dm')
+def dm():
     return render_template('dm.html')
 @app.route('/test')
 def test():
