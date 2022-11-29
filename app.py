@@ -7,7 +7,7 @@ def home():
     return render_template('home.html')
 @app.route('/dmm')
 def dmm():
-    return render_template('dmm.html')
+    return render_template('dm.html')
 @app.route('/test')
 def test():
     return render_template('test.html')
