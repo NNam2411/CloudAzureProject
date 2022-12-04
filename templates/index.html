@@ -8,15 +8,15 @@
     
    
     <script src="https://kit.fontawesome.com/f50e40892f.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"> -->
+    {% comment %} <!-- <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"> --> {% endcomment %}
     <link rel="stylesheet" href="./static/style.css">
     <title>Musician Dream</title>  
 </head>
 <body>
     <div id="main">
-        <!-- HEADER -->
+        {% comment %} <!-- HEADER --> {% endcomment %}
         <div id="header">
-            <!-- nav -->
+            {% comment %} <!-- nav --> {% endcomment %}
             <div id="wrap-nav">
                 <ul id="nav">
                     <li><a href="/index">Home</a></li>
@@ -43,17 +43,16 @@
                     </div> 
                 </a>
             </div>
-            <!-- end nav -->
+            {% comment %} <!-- end nav --> {% endcomment %}
         </div>      
-        <!-- END HEADER -->
-        <!-- SLIDESHOW -->
+        {% comment %} <!-- END HEADER -->
+        <!-- SLIDESHOW --> {% endcomment %}
         <div id="slideshow">
-            <div class="slideshow-item">
-                <!-- <img src="{{url_for('template',filename='assets/img/slideshow/pianohighsln.png') }}" alt="slideshow-item"> -->
+            <div class="slideshow-item">               
                 <img src="https://iili.io/H2K5iUx.png" alt = "slideshow-item">
             </div>
         </div>
-        <!-- END SLIDESHOW -->
+        {% comment %} <!-- END SLIDESHOW --> {% endcomment %}
         <div id="content">
         <!-- PRODUCT -->
         <section class="offer-product">
@@ -319,9 +318,9 @@
                 </div>
             </div>
         </section>
-        <!-- End Tour -->
+        {% comment %} <!-- End Tour -->
         <!-- END PRODUCT -->
-        <!-- THE REVIEW -->
+        <!-- THE REVIEW --> {% endcomment %}
         <div class="wrap-review">
             <div class="intro-course">
                 <h1>REVIEW COURSE</h1>
@@ -395,10 +394,10 @@
                 </div>
             </div>
         </div>        
-        <!-- END THE REVIEW -->       
+        {% comment %} <!-- END THE REVIEW -->        {% endcomment %}
         </div>
-        <!-- END CONTENT -->
-        <!-- FOOTER  -->
+        {% comment %} <!-- END CONTENT --> {% endcomment %}
+        {% comment %} <!-- FOOTER  --> {% endcomment %}
         <footer id="footer">
             <div class="wrap-footer-list">
                 <div class="row">
@@ -449,7 +448,7 @@
                 </div>
             </div>
         </footer>
-        <!-- END FOOTER  -->
+        {% comment %} <!-- END FOOTER  --> {% endcomment %}
     </div>
     
     <script src="{{url_for('static',filename='style.css,reset.css')}}"></script>
