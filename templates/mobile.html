@@ -1,0 +1,196 @@
+{%block content%}
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	
+	<link rel="shortcut icon" href="./static/img/favicon.ico" />
+
+	<!-- Load font awesome icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+	 crossorigin="anonymous">
+
+	<!-- owl carousel libraries -->
+	<link rel="stylesheet" href="./static/js/owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="./static/js/owlcarousel/owl.theme.default.min.css">
+	<script src="./static/js/Jquery/Jquery.min.js"></script>
+	<script src="./static/js/owlcarousel/owl.carousel.min.js"></script>
+
+	<!-- tidio - live chat -->
+	<!-- <script src="//code.tidio.co/bfiiplaaohclhqwes5xivoizqkq56guu.js"></script> -->
+
+	<!-- our files -->
+	<!-- css -->
+	<link rel="stylesheet" href="./static/mobile/style.css">
+	<link rel="stylesheet" href="./static/mobile/topnav.css">
+	<link rel="stylesheet" href="./static/mobile/header.css">
+	<link rel="stylesheet" href="./static/mobile/banner.css">
+	<link rel="stylesheet" href="./static/mobile/taikhoan.css">
+	<link rel="stylesheet" href="./static/mobile/trangchu.css">
+	<link rel="stylesheet" href="./static/mobile/home_products.css">
+	<link rel="stylesheet" href="./static/mobile/pagination_phantrang.css">
+	<link rel="stylesheet" href="./static/mobile/footer.css">
+	<!-- js -->
+	<script src="./static/data/products.js"></script>
+	<script src="./static/js/classes.js"></script>
+	<script src="./static/js/dungchung.js"></script>
+	<script src="./static/js/trangchu.js"></script>
+    <title>{% block title%}Home{% endblock %}</title>
+</head>
+
+<body>
+
+	<!-- <script> addTopNav(); </script> -->
+    <div class="top-nav group">
+        <section>
+            <div class="social-top-nav">
+                <a class="fa fa-facebook"></a>
+                <a class="fa fa-twitter"></a>
+                <a class="fa fa-google"></a>
+                <a class="fa fa-youtube"></a>
+            </div> <!-- End Social Topnav -->
+
+            <ul class="top-nav-quicklink flexContain">
+                <li><a href="/home"><i class="fa fa-home"></i> Trang chủ</a></li>
+                <li><a href="/tintuc"><i class="fa fa-newspaper-o"></i> Tin tức</a></li>
+                <li><a href="/tuyendung"><i class="fa fa-handshake-o"></i> Tuyển dụng</a></li>
+                <li><a href="/gioithieu"><i class="fa fa-info-circle"></i> Giới thiệu</a></li>
+                <li><a href="/trungtambaohanh"><i class="fa fa-wrench"></i> Bảo hành</a></li>
+                <li><a href="/lienhe"><i class="fa fa-phone"></i> Liên hệ</a></li>
+            </ul> <!-- End Quick link -->
+        </section><!-- End Section -->
+    </div>
+	<section>
+		<!-- <script> addHeader(); </script> -->
+        <div class="header group">
+            <div class="logo">
+                <a href="/home">
+                    <img src="./static/img/logo.jpg" alt="Trang chủ Smartphone Store" title="Trang chủ Smartphone Store">
+                </a>
+            </div> <!-- End Logo -->
+    
+            <div class="content">
+                <div class="search-header" style="position: relative; left: 162px; top: 1px;">
+                    <form class="input-search" method="get" action="/home">
+                        <div class="autocomplete">
+                            <input id="search-box" name="search" autocomplete="off" type="text" placeholder="Nhập từ khóa tìm kiếm...">
+                            <button type="submit">
+                                <i class="fa fa-search"></i>
+                                Tìm kiếm
+                            </button>
+                        </div>
+                    </form> <!-- End Form search -->
+                    <div class="tags">
+                        <strong>Từ khóa: </strong>
+                    </div>
+                </div> <!-- End Search header -->
+    
+                <div class="tools-member">
+                    <div class="member">
+                        <a onclick="checkTaiKhoan()">
+                            <i class="fa fa-user"></i>
+                            Tài khoản
+                        </a>
+                        <div class="menuMember hide">
+                            <a href="/nguoidung">Trang người dùng</a>
+                            <a onclick="if(window.confirm('Xác nhận đăng xuất ?')) logOut();">Đăng xuất</a>
+                        </div>
+    
+                    </div> <!-- End Member -->
+    
+                    <div class="cart">
+                        <a href="/giohang">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>Giỏ hàng</span>
+                            <span class="cart-number"></span>
+                        </a>
+                    </div> <!-- End Cart -->
+    
+                    <!--<div class="check-order">
+                        <a>
+                            <i class="fa fa-truck"></i>
+                            <span>Đơn hàng</span>
+                        </a>
+                    </div> -->
+                </div><!-- End Tools Member -->
+            </div> <!-- End Content -->
+        </div> <!-- End Header -->`
+		<div class="banner">
+			<div class="owl-carousel owl-theme"></div>
+		</div> <!-- End Banner -->
+
+		<img src="./static/img/banners/blackFriday.gif" alt="" style="width: 100%;">
+
+		<br>
+		<div class="companyMenu group flexContain"></div>
+
+		<div class="flexContain">
+
+			<div class="pricesRangeFilter dropdown">
+				<button class="dropbtn">Giá tiền</button>
+				<div class="dropdown-content"></div>
+			</div>
+
+			<div class="promosFilter dropdown">
+				<button class="dropbtn">Khuyến mãi</button>
+				<div class="dropdown-content"></div>
+			</div>
+
+			<div class="starFilter dropdown">
+				<button class="dropbtn">Số lượng sao</button>
+				<div class="dropdown-content"></div>
+			</div>
+
+			<div class="sortFilter dropdown">
+				<button class="dropbtn">Sắp xếp</button>
+				<div class="dropdown-content"></div>
+			</div>
+
+		</div> <!-- End khung chọn bộ lọc -->
+
+		<div class="choosedFilter flexContain">
+			<a id="deleteAllFilter" style="display: none;">
+				<h3>Xóa bộ lọc</h3>
+			</a>
+		</div> <!-- Những bộ lọc đã chọn -->
+		<hr>
+
+		<!-- Mặc định mới vào trang sẽ ẩn đi, nế có filter thì mới hiện lên -->
+		<div class="contain-products" style="display:none"> 
+			<div class="filterName">
+				<input type="text" placeholder="Lọc trong trang theo tên..." onkeyup="filterProductsName(this)">
+			</div> <!-- End FilterName -->
+
+			<ul id="products" class="homeproduct group flexContain">
+				<div id="khongCoSanPham">
+					<i class="fa fa-times-circle"></i>
+					Không có sản phẩm nào
+				</div> <!-- End Khong co san pham -->
+			</ul><!-- End products -->
+
+			<div class="pagination"></div>
+		</div>
+
+		<!-- Div hiển thị khung sp hot, khuyến mãi, mới ra mắt ... -->
+		<div class="contain-khungSanPham" ></div>
+
+	</section> <!-- End Section -->
+
+	<script>
+		addContainTaiKhoan(); addPlc();
+	</script>
+
+	<div class="footer"><script>addFooter();</script></div>
+
+	<i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i> 
+	
+	
+    <script src="{{url_for('static/mobile',filename='banner.css,baohanh.css,chitietsanpham.css,footer.css,gioHang.css,gioithieu.css,header.css,home_product.css,lienhe.css,nguoidung.css,pagination_phantrang.css,reset.css,style.css,taikhoan.css,tintuc.css,topnav.css,trangchu.css,tuyendung.css')}}"></script>
+</body>
+
+</html>
+{%endblock%}

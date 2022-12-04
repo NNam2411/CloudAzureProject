@@ -16,6 +16,13 @@ def hello():
 @app.route("/index")
 def index():
     return render_template("index.html")
+@app.route("/nhan")
+def nhan():
+    return render_template("nhan.html")
+@app.route("/mobile")
+def mobile():
+    return render_template("mobile.html")
+    
 if __name__ == '__main__':
     # app.run(host='127.0.0.1', port=5500, debug=True)
     app.run(debug=True)

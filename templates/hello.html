@@ -1,23 +1,25 @@
 {%extends "home.html"%}
-{%block content%}
+{%block%}
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="static/style.css">
     <title>Musician Dream</title>
     {% comment %} <script src="https://kit.fontawesome.com/f50e40892f.js" crossorigin="anonymous"></script> {% endcomment %}
 </head>
 <body>
-    <div id="main">
+    {% comment %} <div id="main"> {% endcomment %}
         {% comment %} <!-- HEADER --> {% endcomment %}
         <div id="header">
 
             {% comment %} <!-- nav --> {% endcomment %}
             <div id="wrap-nav">
                 <ul id="nav">
-                    <li><a href="index.html">Home</a></li>
+                    {% comment %} <li><a href="index.html">Home</a></li> {% endcomment %}
                     {% comment %} <li><a href="https://open.spotify.com">Songs</a></li>
                     <li><a href="">Course<i class="nav-arrow-down ti-angle-down"></i></a>
                         <ul class="subnav">
@@ -28,18 +30,18 @@
                     </li>         {% endcomment %}
                     {% comment %} <li><a href="https://vietthuong.vn/dan-piano.html">Product</a></li>                                      {% endcomment %}
                 </ul>
-                <a href="">
+                {% comment %} <a href=""> {% endcomment %}
                     <div class="wrap-login-btn">
-                        <a href="">
+                        {% comment %} <a href=""> {% endcomment %}
                         <button class="login-btn">Log In</button>
-                        </a>
+                        {% comment %} </a> {% endcomment %}
                     </div>  
                     <div class="wrap-signup-btn">
-                        <a href="">
+                        {% comment %} <a href=""> {% endcomment %}
                         <button class="signup-btn">Sign Up</button>
-                        </a>
+                        {% comment %} </a> {% endcomment %}
                     </div> 
-                </a>
+                {% comment %} </a> {% endcomment %}
             </div>
             {% comment %} <!-- end nav --> {% endcomment %}
         </div> 
@@ -49,7 +51,7 @@
                 {% comment %} <img src="https://iili.io/H2K5iUx.png" alt = "slideshow-item"> {% endcomment %}
             </div>
         </div>
-    </div>     
+    {% comment %} </div>      {% endcomment %}
 </body>
 </html>
 
