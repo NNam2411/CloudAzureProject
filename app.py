@@ -3,17 +3,16 @@ from app import *
 app = Flask(__name__)
 
 @app.route("/")
-def base():
+def base():  # type: ignore
     return render_template("home.html")
 
 @app.route("/home")
 def home():
     return render_template("home.html")
 
-
-@app.route("/base")
-def base():
-    return render_template("base.html")
+@app.route("/based")
+def based():
+    return render_template("based.html")
 
 @app.route("/test")
 def test():
