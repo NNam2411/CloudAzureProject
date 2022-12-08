@@ -4,7 +4,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def base():  # type: ignore
-    return render_template("home.html")
+    return render_template("index.html")
+
+@app.route("/index")
+def index():
+    return render_template("index.html")
 
 @app.route("/home")
 def home():
@@ -22,9 +26,7 @@ def test():
 def hello():
     return render_template("hello.html")
 
-@app.route("/index")
-def index():
-    return render_template("index.html")
+
 
     
 if __name__ == '__main__':
